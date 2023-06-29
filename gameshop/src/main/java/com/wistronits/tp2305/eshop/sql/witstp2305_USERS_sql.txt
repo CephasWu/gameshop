@@ -1,0 +1,36 @@
+create table USERS (
+USER_ID int primary key AUTO_INCREMENT,
+USER_ACCOUNT  VARCHAR(30) NOT NULL,
+USER_PASSWORD  VARCHAR(20) NOT NULL,
+USER_NICKNAME VARCHAR(50) DEFAULT 'USER',
+USER_PHONE VARCHAR(10),
+USER_CERTIFICATION_STATUS boolean DEFAULT false,
+USER_REGISTRATION_DATE  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+USER_PIC mediumblob )
+;
+
+
+INSERT INTO `witstp2305`.`users`
+(`USER_ACCOUNT`,`USER_PASSWORD`,`USER_NICKNAME`,`USER_PHONE`,`USER_CERTIFICATION_STATUS`,`USER_REGISTRATION_DATE`,`USER_PIC`)
+VALUES
+(
+'q111111111p@yahoo.com.tw','654321','nike','0912345678',0,"2023-05-17 10:48:40",null),
+(
+'aqwaqwaqw.tw@yahoo.com.tw','222222','Peter','0911222333',0,"2022-08-09 23:11:06",null),
+(
+'111222@yahoo.com.tw','00990099','mary','0910887766',0,"2020-12-30 00:01:09",null),
+(
+'0806123@yahoo.com.tw','99887766','chen','0911557799',0,"2022-02-01 11:21:45",null),
+(
+'willback@yahoo.com.tw','asdfgh','google','0922567890',0,"2023-01-22 14:50:22",null),
+(
+'youcandoit@yahoo.com.tw','4rfvgy7h','yahoo','0930552145',0,"2021-09-20 19:44:09",null),
+(
+'amyyoung@yahoo.com.tw','pp00pp00','amy','0945679432',0,"2022-11-11 11:11:11",null),
+(
+'gogogopro@yahoo.com.tw','gopro','yooooooy','0912452211',0,"2023-04-14 08:34:55",null),
+(
+'teacherlee@yahoo.com.tw','0923ert','teacherlee','0915789234',0,"2023-02-28 15:14:35",null),
+(
+'Michael0000@yahoo.com.tw','7ujmnhy6','Michael','0955098765',0,"2023-04-01 03:06:02",null)
+;

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+	  <file>./logs/eShop.log</file>
+	  <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+	    <fileNamePattern>/logs/eShop.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+	    <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+	      <maxFileSize>10MB</maxFileSize>
+	    </timeBasedFileNamingAndTriggeringPolicy>
+	    <maxHistory>31</maxHistory>
+	  </rollingPolicy>
+	  <encoder>
+	    <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+	  </encoder>
+	</appender>
+	
+	<!-- 刪除超過31天的日誌 -->
+	<appender name="DELETE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+	  <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+	    <fileNamePattern>/logs/eShop.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+	    <maxHistory>31</maxHistory>
+	  </rollingPolicy>
+	  <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+	    <maxFileSize>10MB</maxFileSize>
+	  </triggeringPolicy>
+	  <encoder>
+	    <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+	  </encoder>
+	</appender>
+	
+	<!-- 將刪除策略加入 root logger -->
+	<root level="INFO">
+	  <appender-ref ref="FILE" />
+	  <appender-ref ref="DELETE" />
+	</root>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>

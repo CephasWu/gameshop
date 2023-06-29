@@ -1,0 +1,12 @@
+"product_Id";"product_Name";"product_Type";"product_Price";"product_Count";"product_Photo"
+1;"Nintendo Switch";"video game console";8000;1;"Nintendo_Switch.jpg"
+2;"Nintendo Switch Oled";"video game console";12000;2;"Nintendo_Switch_Oled.jpg"
+3;"Sony PS4 PlayStation 4";"video game console";6000;3;"Sony_PS4_PlayStation4.jpg"
+4;"Sony PS5 PlayStation 5";"video game console";14000;4;"Sony_PS5_PlayStation5.jpg"
+5;"Microsoft Xbox One X";"video game console";10000;5;"Microsoft_Xbox_One_X_1TB.jpg"
+6;"Xbox Elden Ring";"video game";1600;5;"Microsoft_Xbox_ELDEN_RING.jpg"
+7;"NS Switch Monster Hunter Rise";"video game";1200;1;"NS_Switch_monster_hunter_rise.jpg"
+8;"NS Switch �ʪ��ˤͷ| ���媩";"video game";1350;2;"NS_Switch_�ʪ��ˤͷ|_���媩.jpg"
+9;"SONY PS4 Elden Ring";"video game";1600;5;"SONY_PS4_ELDEN_RING.jpg"
+10;"SONY PS5 Elden Ring";"video game";1700;10;"SONY_PS5_ELDEN_RING.jpg"
+
